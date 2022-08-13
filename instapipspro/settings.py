@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 import os
+import django_heroku
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -25,7 +26,7 @@ SECRET_KEY = 'django-insecure-0y1*sev&s143q$b2o%8k&i&_0!39uxuqdk9ipqom25fv_ifuk0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['instapipspro1.herokuapp.com']
 
 
 # Application definition
@@ -77,13 +78,24 @@ WSGI_APPLICATION = 'instapipspro.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': BASE_DIR / 'db.sqlite3',
+#    }
+#}
+DATABASES ={
+        'default':{
+            'ENGINE':'django.db.backends.postgresql_psycopg2',
+            'NAME':'ddo34im23b8j0q',
+            'USER':'ssbqlizyydcely',
+            'PASSWORD':'3302ceca92be0f79646d2cfd16b78c475532ed0ac24a41b274bb0a4f94633f18',
+            'HOST':'ec2-44-193-178-122.compute-1.amazonaws.com',
+            'PORT':'5432',
 
+        }
+
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -124,6 +136,8 @@ STATICFILES_DIRS=[
     os.path.join(BASE_DIR,'instapipspro/static')
 ]
 STATIC_ROOT = os.path.join(BASE_DIR,'assets')
+
+django_heroku.settings(locals())
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
