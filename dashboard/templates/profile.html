@@ -1,0 +1,58 @@
+
+{% extends 'dashboard.html' %}
+
+{%block content%}
+{% load static %} 
+        <div class="card" style="width:70%;">
+				<div class="page__title h3" style="text-align: center;">My Profile</div>
+<div class="card" style="align-items: center;">
+	
+
+                    <div class="field__label" style="width:50%; padding-top: 20px;">Full Name
+                    </div>
+                    <div class="field__wrap">
+                      <input class="field__input" type="text" name="title" required="">
+                    </div>
+                 <div class="field__label" style="width:50%;padding-top: 20px;">Phone  Number
+                    </div>
+                    <div class="field__wrap">
+                      <input class="field__input" type="text" name="title" required="">
+                    </div>
+                    <div class="field__label" style="width:50%;padding-top: 20px;">Email Address
+                    </div>
+                    <div class="field__wrap">
+                      <input class="field__input" type="email" name="title" required="">
+                    </div>
+                     <div class="field__label" style="width:50%;padding-top: 20px;">Address
+                    </div>
+                    <div class="field__wrap">
+                      <input class="field__input" type="text" name="title" required="">
+                    </div>
+                     <div class="field__label" style="width:50%;padding-top: 20px;">Country
+                    </div>
+                    <div class="field__wrap">
+                      <input class="field__input" type="text" name="title" required="">
+                    </div>
+                     <div class="field__label" style="width:50%;padding-top: 20px;">Identification Number
+                    </div>
+                    <div class="field__wrap">
+                      <input class="field__input" type="text" name="title" required="">
+                    </div>
+                     <div class="field__label" style="width:50%;padding-top: 20px; ">About
+                    </div>
+                    <div class="field__wrap" >
+                      <input class="field__input" style="height: 150px;"  name="title" required="" >
+                    </div>
+                    <p>
+                    	<br>
+                    	<br>
+                    <a class="button header__button" href="/products-add.html">
+
+            <svg class="icon icon-add">
+              <use xlink:href="#icon-add"></use>
+            </svg><span>Save Changes</span></a>
+        </p>
+		</div>
+		
+
+{% endblock%}
